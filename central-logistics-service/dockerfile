@@ -1,0 +1,17 @@
+# Use Ballerina Swan Lake image
+FROM ballerina/ballerina:2201.7.2
+
+# Copy the service files
+COPY . /central-logistics-service
+
+# Set the work directory
+WORKDIR /central-logistics-service
+
+# Build the service
+RUN bal build --skip-tests central-logistics-service
+
+# Expose the application port
+EXPOSE 8080
+
+# Run the service
+CMD ["bal", "run", "central-logistics-service"]
