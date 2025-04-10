@@ -1,0 +1,19 @@
+[ballerina.log]
+level = "INFO"
+
+[logistics_db]
+host = "localhost"
+port = 27017
+name = "logistics_db"
+
+[kafka]
+bootstrap_servers = "localhost:9092"
+
+[project]
+org = "myorg"
+name = "standard-delivery-service"
+version = "1.0.0"
+
+[dependencies]
+ballerina/kafka = "4.0.0"
+ballerina/mongo = "3.4.0"
