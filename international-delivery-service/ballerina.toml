@@ -1,0 +1,27 @@
+[package]
+org = "logisticssystem"
+name = "international_delivery_service"
+version = "0.1.0"
+
+[build-options]
+observabilityIncluded = true
+
+[[platform.java11.dependency]]
+groupId = "org.mongodb"
+artifactId = "mongodb-driver-sync"
+version = "4.3.0"
+
+[[dependency]]
+org = "ballerinax"
+name = "mongodb"
+version = "4.3.0"
+
+[[dependency]]
+org = "ballerinax"
+name = "kafka"
+version = "3.9.1"
+
+[[platform.java11.dependency]]
+groupId = "org.apache.kafka"
+artifactId = "kafka-clients"
+version = "3.9.1"
