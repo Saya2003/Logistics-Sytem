@@ -1,0 +1,17 @@
+# Use Ballerina Swan Lake image
+FROM ballerina/ballerina:2201.7.2
+
+# Copy the service files
+COPY . /standard-delivery-service
+
+# Set the work directory
+WORKDIR /standard-delivery-service
+
+# Build the service
+RUN bal build --skip-tests standard-delivery-service
+
+# Expose the application port (optional)
+EXPOSE 8083
+
+# Run the service
+CMD ["bal", "run", "standard-delivery-service"]
